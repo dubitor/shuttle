@@ -13,6 +13,7 @@ use axum::Router;
 use axum_0_7::Router;
 
 /// A wrapper type for [axum::Router] so we can implement [shuttle_runtime::Service] for it.
+#[derive(Clone)]
 pub struct AxumService(pub Router);
 
 #[shuttle_runtime::async_trait]
